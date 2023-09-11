@@ -14,3 +14,26 @@ const getSumPairZero = (arr) => {
 }
 
 console.log(getSumPairZero(a));
+
+//optimize solution for sorted array
+
+const Optimize = (arr) => {
+    let left = 0;
+    let right = arr.length - 1
+    // console.log(left, right);
+
+    while (left < right) {
+        if ((arr[left] + arr[right]) == 0) {
+            console.log(`[${arr[left]}, ${arr[right]}]`);
+            return true;
+        }
+        else if ((arr[left] + arr[right]) > 0) {
+            right--;
+        }
+        else if ((arr[left] + arr[right]) < 0) {
+            left++;
+        }
+    }
+
+}
+Optimize(a);
