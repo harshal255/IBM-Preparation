@@ -13,6 +13,7 @@ for (let i = 0; i < reverse.length; i += 2) {
             // console.log(x);
             answer += (String.fromCharCode(x));
         }
+        //value is greater than 100
         else if (i + 2 < reverse.length) {
             x = x + reverse[i + 2];
             // console.log(x);
